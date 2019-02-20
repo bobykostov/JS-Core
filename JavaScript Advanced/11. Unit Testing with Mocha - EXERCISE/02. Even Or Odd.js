@@ -1,3 +1,18 @@
+let expect = require('chai').expect;
+let assert = require('chai').assert;
+
+
+
+function isOddOrEven(string) {
+    if (typeof(string) !== 'string')
+        return undefined;
+    if (string.length % 2 === 0)
+        return 'even';
+    return 'odd';
+}
+
+
+
 describe('function test', function () {
     it('if arg is number should return undefined', function () {
         expect(isOddOrEven(15)).to.equal(undefined, 
