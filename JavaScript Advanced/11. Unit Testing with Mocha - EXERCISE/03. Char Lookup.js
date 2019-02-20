@@ -1,3 +1,19 @@
+let assert = require('chai').assert;
+
+
+
+function lookupChar(string, index) {
+    if (typeof(string) !== 'string' || 
+        !Number.isInteger(index))
+        return undefined;
+    if (string.length <= index || index < 0)
+        return 'Incorrect index';
+
+    return string.charAt(index);
+}
+
+
+
 describe('lookupChar', function () {
     describe('invalid inputs checks', function () {
         it('number instead of string returns undefined', function () {
